@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Traven396-Project-4-with-Alex-d598c0c/Scene/icon.png" type="Texture" id=1]
 [ext_resource path="res://Traven396-Project-4-with-Alex-d598c0c/Scene/Player.gd" type="Script" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
