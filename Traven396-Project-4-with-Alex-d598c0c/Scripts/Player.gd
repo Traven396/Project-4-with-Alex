@@ -1,11 +1,12 @@
 extends Area2D
-
+signal hit
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 export var speed = 250
+export var startPos = Vector2.ZERO
 var screen_size
 
 
@@ -26,10 +27,19 @@ func _process(delta):
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
+		rotation_degrees = rad2deg(velocity.angle())
 	
 	position += velocity * delta
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
+
+func _on_Player_body_entered(body):
+	hide()
+	emit_signal("hit")
 	
-	if Input.is_action_pressed("click"):
-		position = get_global_mouse_position()
+	$CollisionShape2D.set_deferred("disabled", true)

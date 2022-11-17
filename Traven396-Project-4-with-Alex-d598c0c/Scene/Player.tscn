@@ -1,35 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Traven396-Project-4-with-Alex-d598c0c/Scene/icon.png" type="Texture" id=1]
-[ext_resource path="res://Traven396-Project-4-with-Alex-d598c0c/Scene/Player.gd" type="Script" id=2]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-} ]
+[ext_resource path="res://Traven396-Project-4-with-Alex-d598c0c/Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Traven396-Project-4-with-Alex-d598c0c/Sprites/Character.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 31, 31.5 )
+extents = Vector2( 42.5, 66.5 )
 
 [node name="Player" type="Area2D"]
-position = Vector2( 496, 226 )
+position = Vector2( 486, 224 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
-animation = "up"
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -0.5 )
+position = Vector2( 0.5, -0.5 )
+rotation = 1.5708
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
