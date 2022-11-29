@@ -27,7 +27,7 @@ func _physics_process(delta):
 	
 	var velocity2: Vector2
 	if velocity.length() > 0:
-		velocity2 = velocity.normalized() * speed * delta
+		velocity2 = velocity.normalized() * speed
 		rotation_degrees = rad2deg(velocity.angle())
 	
 	move_and_slide(velocity2)
