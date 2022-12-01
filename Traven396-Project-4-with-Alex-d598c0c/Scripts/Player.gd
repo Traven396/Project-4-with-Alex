@@ -14,7 +14,7 @@ var screen_size
 func _ready():
 	screen_size = get_viewport_rect().size
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
@@ -32,6 +32,14 @@ func _physics_process(delta):
 	
 	move_and_slide(velocity2)
 	
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		var newScript = collision.collider.get_script()
+		if (newScript != null):
+			if (newScript.has_method("resetScene")):
+				newScript.resetScene()
+	
+	
 
 func start(pos):
 	position = pos
@@ -43,3 +51,4 @@ func _on_Player_body_entered(body):
 	emit_signal("hit")
 	
 	$CollisionShape2D.set_deferred("disabled", true)
+

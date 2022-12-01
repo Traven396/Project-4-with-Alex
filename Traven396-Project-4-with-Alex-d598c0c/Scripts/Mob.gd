@@ -10,3 +10,5 @@ func _ready():
 func _process(delta):
 	t+=delta
 	$Path2D/PathFollow2D.offset=t * 200
+
+
