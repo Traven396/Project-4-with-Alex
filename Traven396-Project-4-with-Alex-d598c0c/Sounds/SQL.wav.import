@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SQL.wav-b0c262197acd53aa48126456a9b205cc.sample"
+
+[deps]
+
+source_file="res://Traven396-Project-4-with-Alex-d598c0c/Sounds/SQL.wav"
+dest_files=[ "res://.import/SQL.wav-b0c262197acd53aa48126456a9b205cc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

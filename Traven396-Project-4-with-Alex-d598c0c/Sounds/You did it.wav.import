@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/You did it.wav-c1d838b7018b48d8e168dd88e63a7f89.sample"
+
+[deps]
+
+source_file="res://Traven396-Project-4-with-Alex-d598c0c/Sounds/You did it.wav"
+dest_files=[ "res://.import/You did it.wav-c1d838b7018b48d8e168dd88e63a7f89.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
