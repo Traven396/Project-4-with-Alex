@@ -4,7 +4,7 @@
 [ext_resource path="res://Traven396-Project-4-with-Alex-d598c0c/Sprites/Character.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 45.0111
+radius = 18.0278
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 6
@@ -12,11 +12,11 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = 500
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -12.94, -0.663 )
 rotation = 1.5708
-scale = Vector2( 0.04, 0.04 )
+scale = Vector2( 0.0178662, 0.0159843 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

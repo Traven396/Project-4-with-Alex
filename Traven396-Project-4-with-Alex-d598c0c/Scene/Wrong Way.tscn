@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Traven396-Project-4-with-Alex-d598c0c/Assets/2257a6f27bc32976db3d03d87d89ceebe5d38bbdae60dea0ee1e52314e1e43bd_1.jpg" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 100, 78 )
+scale = Vector2( 0.497487, 0.47651 )
+texture = ExtResource( 1 )
